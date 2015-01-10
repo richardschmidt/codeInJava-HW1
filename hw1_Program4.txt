@@ -1,0 +1,61 @@
+public class Program_4 {
+
+	
+	public static void main(String[] args) {
+	double priceOne;
+	double weightOne;
+	double priceTwo;
+	double weightTwo;
+	double averagePriceOne;
+	double averagePriceTwo;
+	String bestOne;
+	String bestTwo;
+	String perPound;
+	
+		Scanner inReader = new Scanner (System.in);
+	
+	System.out.println("Input Price for Package 1:");//
+	priceOne = inReader.nextDouble();
+	
+	if (priceOne<0){
+		System.out.println("Incorrect Input: Try again!");
+		priceOne = inReader.nextDouble();
+	}
+	System.out.println("Input Weight for Package 1 (In lbs):");
+	weightOne = inReader.nextDouble();
+	
+	if (weightOne<0){
+		System.out.println("Incorrect Input: Try again!");
+		weightOne = inReader.nextDouble();
+	}
+	System.out.println("Input Price for Package 2:");
+	priceTwo = inReader.nextDouble();
+	
+	if (priceTwo<0){
+		System.out.println("Incorrect Input: Try again!");
+		priceTwo = inReader.nextDouble();
+	}
+	System.out.println("Input Weight for Package 2 (In lbs):");
+	weightTwo = inReader.nextDouble();
+	
+	if (weightTwo<0){
+		System.out.println("Incorrect Input: Try again!");
+		weightTwo = inReader.nextDouble();
+	}
+	averagePriceOne = priceOne/weightOne;
+	averagePriceTwo = priceTwo/weightTwo;
+	
+	bestOne = "The best price is package 1 at:";
+	bestTwo = "The best price is package 2 at:";
+	perPound = " dollars per pound.";
+	
+	if (averagePriceOne<averagePriceTwo){
+		System.out.printf("%s%3.2f%s",bestOne,averagePriceOne,perPound);
+	}
+	else {
+		System.out.printf("%s%3.2f%s",bestTwo,averagePriceTwo,perPound);
+	}
+	
+	}
+
+}//End

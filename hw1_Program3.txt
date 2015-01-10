@@ -1,0 +1,39 @@
+package problem_3;
+
+import java.util.Scanner;
+
+public class Program_3 {
+
+	
+	public static void main(String[] args) {
+	double balance;
+	double annualInterestRate;
+	double interest;	
+	String aLine;
+	
+	Scanner inReader = new Scanner (System.in);
+	
+	System.out.println("Input balance:");
+	balance = inReader.nextDouble();
+	
+	if (balance <0){
+		System.out.println("No negatives allowed, try again:");
+		System.out.println("Input balance:");
+		balance = inReader.nextDouble();
+	}
+	String temp = inReader.nextLine();
+	System.out.println("Input Annual Interest Rate:");
+	
+	annualInterestRate = inReader.nextDouble();
+	
+	if (annualInterestRate <0){
+		System.out.println("No negatives allowed, try again:");
+		System.out.println("Input Annual Interest Rate:");
+		annualInterestRate = inReader.nextDouble();
+	}
+	interest = balance * (annualInterestRate/1200);
+	aLine = ("The Interest on your next monthly mortgage is:");
+	System.out.printf("%s%4.2f\n",aLine,interest);
+	}
+
+}//End 

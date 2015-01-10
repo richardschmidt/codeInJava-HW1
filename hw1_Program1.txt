@@ -1,0 +1,34 @@
+package problem_1;
+
+import java.util.Scanner;
+
+public class Program_1 {
+
+	
+	public static void main(String[] args) {
+	String studentName;//Full name; John Smith
+	
+	Scanner inReader = new Scanner(System.in);
+	System.out.println("Enter your full name:");
+	
+	studentName = inReader.nextLine();
+	
+	int studentAge;//Age in years; 25
+	
+	System.out.println("Enter your age:");
+	studentAge = inReader.nextInt();
+	
+	double studentHeight;//Height in feet; 5.9
+	
+	System.out.println("Enter your height:");
+	studentHeight = inReader.nextDouble();
+	
+	
+	
+	System.out.println(studentName + " " + studentAge + " " + studentHeight);
+	
+	
+
+	}
+
+}

@@ -1,0 +1,47 @@
+package problem_2;
+
+import java.util.Scanner;
+
+public class Program_2 {
+
+	
+	public static void main(String[] args) {
+	double aRadius;
+	String aUnit;
+	double aArea;
+	final double PI = 3.14159;
+	String fAnswer;
+	
+		Scanner inReader = new Scanner(System.in);
+	System.out.println("Enter radius:");
+	
+	aRadius = inReader.nextDouble();
+	
+	if (aRadius<0){
+		System.out.println("Incorrect input, try again!");
+		System.out.println("Enter radius:");
+		aRadius = inReader.nextDouble();
+	}
+	String temp = inReader.nextLine();
+	
+	
+	System.out.println("Enter Units: ft, in, m, cm");
+	
+	aUnit = inReader.nextLine();
+	
+	if (!aUnit.equals("in") && !aUnit.equals("ft") && !aUnit.equals("in") && !aUnit.equals ("m") && !aUnit.equals ("cm")){
+		System.out.println("Unit is not recognized");
+		System.out.println("Enter Units: ft, in, m, cm");
+		aUnit = inReader.nextLine();
+		}
+			
+	aArea = aRadius * aRadius * PI;
+	fAnswer = ("The Area is");
+	
+	System.out.println(fAnswer+ " " + aArea + " " + aUnit);
+	
+	
+	}
+	
+
+}//End Class
