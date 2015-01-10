@@ -1,0 +1,30 @@
+package problem_1_alt;
+
+import java.util.Scanner;
+
+/**
+ * @author richa_000
+ *
+ */
+public class Problem_1_alt {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner text = new Scanner(System.in);
+			
+		String aLine;
+			
+			System.out.println("Enter the following: name, age, and height.");
+			aLine = text.nextLine();
+			
+			String msg = "You entered:"; // Simplistic way to create a standard message by creating an object
+			
+			System.out.println(msg + " " + aLine);
+		
+	}
+
+}

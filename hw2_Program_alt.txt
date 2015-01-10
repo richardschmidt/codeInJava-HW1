@@ -1,0 +1,68 @@
+package problem_2_alt;
+
+import java.util.Scanner;
+/**
+ * @author richa_000
+ *
+ */
+public class Problem_2_alt {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Scanner text = new Scanner(System.in);
+			
+			/** Declare variable (declaring variable type is required in Java)
+			 * Data sets:
+			 * radius has to be a double because of the calculation involved (PI = 3.14159)
+			 * unit has to be a string so you can output the units the user would like to use (ex. ft, in, m, cm)
+			 * area has to be a double so it can output the decimal place due to calculation of radius 
+			 * PI has to be a double, but should be final so that it is a permanent value, to avoid type casting 
+			 * The answer to the equation should be a string so all character outputs are correct
+			 */
+			double aRadius; // Required because (PI = 3.14159)
+			String aUnit; // Required for the unit output
+			double anArea; // Required because (PI = 3.14159)
+			final double PI = 3.14159;
+			String finalAnswer;
+			
+				Scanner keyboardReader = new Scanner(System.in); // Call the Scanner class to read the input from the keyboard
+			System.out.println("Enter radius:"); // Outputs to the user what to input first
+			
+			aRadius = keyboardReader.nextDouble(); // Reads the input from the keyboard and appends it to the identifier aRadius and moves to the next line
+			
+			/**
+			 * Use an if statement to check the user input. Make sure they do not input a negative number since circles cannot have a negative radius
+			 */
+			if (aRadius <= 0){
+				System.out.println("Input cannot be negative, please try again.");
+				System.out.println("Enter radius:");
+				aRadius = keyboardReader.nextDouble();
+			}
+			String temp = keyboardReader.nextLine(); // Needed to allow the program to move the cursor to the next line after .nextDouble()
+			
+			System.out.println("Enter Units: ft, in, m, cm"); // Outputs to the user what to input next 
+			
+			aUnit = keyboardReader.nextLine(); // Reads the input from the keyboard and appends it to the identifies AUnit and moves to the next line
+			
+			/**
+			 * Use an if statement to check the user input. Make sure they input inches, feet, meters, or centimeters
+			 */
+			if (!aUnit.equals("in") && !aUnit.equals("ft") && !aUnit.equals("m") && !aUnit.equals("cm")) {
+				System.out.println("Unit is not recognized");
+				System.out.println("Please enter units using: in, ft, m, or cm format");
+				aUnit = keyboardReader.nextLine();
+			}
+			
+			/**
+			 * Call area to input the formula 
+			 */
+			anArea = aRadius * aRadius * PI; // formula for radius of a circle is Area = radius(square) * PI
+			finalAnswer = ("The Area is");
+			
+			System.out.println(finalAnswer + " " + anArea + " " + aUnit);
+	}
+
+}// End Class
